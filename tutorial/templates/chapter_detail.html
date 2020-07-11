@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-3">
+      <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+
+           <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">
+               <i class="fas fa-home" style="font-size:24px;"></i>
+            </a>
+            <h4 class="header_mob">BeginnersPython</h4>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                 <ul class="navbar-nav mr-auto">
+                    {% for chap in chapters %}
+                    <li class="nav-item">
+                       <a class="nav-link waves-effect" href="{% url 'chapter_detail' chap.slug %}">
+                          {{chap.title}}
+                       </a>
+                    </li>
+                    {% endfor %}
+                 </ul>
+              </div>
+           </div>
+        </nav>
+
+        <div class="sidebar-fixed position-fixed" >
+           <a class="logo-wrapper waves-effect" href="{% url 'home' %}">
+           <img src="{%static 'images/python_logo.jpeg'%}" class="img-fluid" alt="beginnerspython">
+           </a>
+           <div class="list-group list-group-flush">
+              {% for chap in chapters %}
+              <a href="{% url 'chapter_detail' chap.slug %}" class="list-group-item  waves-effect">
+                 {{chap.title}}
+              </a>
+              {% endfor %}
+           </div>
+        </div>
+
+     </header>
+    </div>
+    <div class="col-md-7 detail_1" >
+      <div class="">
+
+      </div>
+      <div  class="description">
+      <div id="description" class="p_text">{{chapter.description | safe }}</div>
+      </div>
+    </div>
+
+     <div class="col-md-2 mob_app">
+      <div class="add">
+
+   </div>
+   </div>
+
+  </div>
+</div>
+
+
+
+
+
+{% endblock %}
+{% block navscript %}
+<script type="text/javascript">
+
+   new WOW().init();
+
+</script>
+{% endblock %}

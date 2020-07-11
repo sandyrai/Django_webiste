@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- <body style="background-color: rgba(28,206,234,0.82);
+background: linear-gradient(-45deg, rgba(147,26,222,0.83) 0%, rgba(28,206,234,0.82) 100%);"> -->
+
+<body style="background-color: #f2f2f2;">
+<nav class="navbar navbar-expand-lg navbar-dark indigo">
+  <a class="navbar-brand" href="{% url 'home' %}">
+    BeginenrsPython
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav ml-auto mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Python <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Python Libraries </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Python Example </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Data Science </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Project's</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+<section class="home_intro_sec">
+  <div class="container-fluid">
+    <div class="row" style="margin-top: 50px;">
+      <div class="col-md-5">
+        <div class="slider_intro">
+        <h1>Start learing Python</h1>
+        <h2>Python Libraries Pandas,numpy</h2>
+        <h2>Data Science</h2>
+      </div>
+      </div>
+      <div class="col-md-7">
+        <img src="{% static 'images/landing_page1.png' %}" style="width: 100%;border:1px solid rgba(147,26,222,0.83);border-radius: 20px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="main_home_section">
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 zoom"   style="margin-bottom: 10px;" style="margin-bottom: 10px;">
+      <!-- Card -->
+      <div class="card card-11 wow slideInLeft"><!-- Card image -->
+        <div class="view overlay icon_design">
+          <i class="fab fa-python"></i>
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!-- Card content -->
+              <div class="card-body">
+                <!-- Button -->
+                <p style="text-align: center;"><a href="#" class="btn btn-primary">Python</a></p>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+    </div>
+
+    <div class="col-md-4 zoom"    style="margin-bottom: 10px;" style="margin-bottom: 10px;">
+      <!-- Card -->
+      <div class="card card-11 reveal fadeIn "><!-- Card image -->
+        <div class="view overlay icon_design">
+          <i class="fas fa-book-reader"></i>
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!-- Card content -->
+              <div class="card-body">
+                <!-- Button -->
+                <p style="text-align: center;"><a href="#" class="btn btn-primary">Libraries</a></p>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+    </div>
+
+    <div class="col-md-4 zoom "   style="margin-bottom: 10px;" style="margin-bottom: 10px;">
+      <!-- Card -->
+      <div class="card card-11 wow slideInRight" ><!-- Card image -->
+        <div class="view overlay icon_design">
+          <i class="fas fa-database"></i>
+          <a href="#!">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <!-- Card content -->
+              <div class="card-body">
+                <!-- Button -->
+                <p style="text-align: center;"><a href="#" class="btn btn-primary">Data Science</a></p>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+    </div>
+  </div>
+</div>
+</section>
+
+
+{%endblock %}

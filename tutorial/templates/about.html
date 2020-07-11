@@ -1,0 +1,517 @@
+{% extends "base.html" %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'assets/css/all.css' %}">
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/elegant-font-icons.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/colors/color-1.css' %}">
+{% endblock %}
+{% block content %}
+<body>
+<div class="page">
+   <!--background -->
+   <div class="bg">
+      <ul class="bg-circles">
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+         <li></li>
+      </ul>
+   </div>
+   <div class="info-tab-area">
+      <div class="container">
+         <div class="info-tab-section">
+            <!--header-->
+            <div class="header d-flex align-items-center">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="profile d-flex align-items-center">
+                           <div class="d-flex align-items-center">
+                              <!-- <a href="index-1.html"><img src="{% static 'assets/img/profile.png' %}" alt=""></a> -->
+                              <a href="#home"><img src="{% static 'images/profile.jpg' %}" alt=""></a>
+                              <a class="desc" href="index-1.html">
+                                 <h3 class="text-white mb-0">Sandeep</h3>
+                                 <h6 class="text-white mb-0">Developer</h6>
+                              </a>
+                           </div>
+                           <!-- <div class="mx-auto">
+                              <p class="text-white mb-0">“Building a website is easy, designing one takes skill.”</p>
+                              </div> -->
+                           <!--social-links-->
+                           <!-- <div class="social-links ml-auto">
+                              <p class="text-white mb-5">Follow Me On:</p>
+                              <ul class="list-inline">
+                              	<li><a href="#" class="text-white"><i class="fab fa-facebook-f"></i></a></li>
+                              	<li><a href="#" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                              	<li><a href="#" class="text-white"><i class="fab fa-instagram"></i></a></li>
+                              	<li><a href="#" class="text-white"><i class="fab fa-dribbble"></i></a></li>
+                              	<li><a href="#" class="text-white"><i class="fab fa-behance"></i></a>
+                              	</li>
+                              </ul>
+                              </div> -->
+                           <!--btn-toggle-->
+                           <div class="btn-toggler ml-auto" id="btnToggle">
+                              <span></span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--info-tab-->
+            <div class="info-tab">
+               <!--navigation-->
+               <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                     <span> <i class="fas fa-home"></i></span>
+                     <span>Home</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" id="about-tab" data-toggle="tab" href="#about" role="tab" aria-controls="about" aria-selected="false">
+                     <span><i class="fas fa-user-tie"></i></span>
+                     <span> About</span>
+                     </a>
+                  </li>
+                  <!-- <li class="nav-item">
+                     <a class="nav-link" id="resume-tab" data-toggle="tab" href="#resume" role="tab" aria-controls="resume" aria-selected="false">
+                     	<span><i class="fas fa-graduation-cap"></i></span>
+                     	<span>Resume</span>
+                     </a> -->
+                  <li class="nav-item">
+                     <a class="nav-link" id="portfolio-tab" data-toggle="tab" href="#portfolio" role="tab" aria-controls="portfolio" aria-selected="false">
+                     <span><i class="fas fa-briefcase"></i></span>
+                     <span>Portfolio</span>
+                     </a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">
+                     <span><i class="fas fa-envelope"></i></span>
+                     <span>Contact</span>
+                     </a>
+                  </li>
+               </ul>
+               <!--tab-content-->
+               <div class="tab-content" id="myTabContent">
+                  <!--Home-->
+                  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                     <div class="home-area d-flex align-items-center">
+                        <div class="home section">
+                           <div class="row">
+                              <div class="col-lg-6">
+                                 <div class="hero">
+                                    <img src="{% static 'assets/img/hero-1.png' %}" alt="">
+                                 </div>
+                              </div>
+                              <div class="col-lg-6 d-flex align-items-center">
+                                 <div class="content">
+                                    <div class="section-title">
+                                       <h5>About Me</h5>
+                                    </div>
+                                    <p class="max-width-400 text-dark mb-15">
+                                       Hello, I’m a Sandeep Kumar.I developed website and Apps. 
+                                       I lives in Delhi,India.
+                                    </p>
+                                    <ul class="info list-inline mb-15">
+                                       <li class="text-dark"><span class="font-w-700">Phone :</span> +91 7007788055</li>
+                                       <li class="text-dark"><span class="font-w-700">Email :</span><a href="mailto:kmr.sandeep1997@gmail.com" class="text-dark">kmr.sandeep1997@gmail.com</a></li>
+                                       <li class="text-dark"><span class="font-w-700">Address :</span>Delhi ,India</li>
+                                       <li class="text-dark"><span class="font-w-700">Freelancer :</span> Available.</li>
+                                    </ul>
+                                    <a href="#about" class="btn-custom" >
+                                    <span><i class="fas fa-user"></i></span>
+                                    <span>more about me</span>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!--about-->
+                  <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
+                     <div class="about section">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="section-title">
+                                 <h5>About Me</h5>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row mb-20">
+                           <div class="col-lg-8">
+                              <div class="bio">
+                                 <h6 class="cd-headline clip text-dark mb-15">
+                                    I Am a <span class="base-color">Developer</span> based in Delhi.
+                                 </h6>
+                                 <!-- <p> Hi! , I am a Web Developer, and I'm very passionate and dedicated to my work.I have acquired the skills and knowledge
+                                    necessary to make your project a success.</p>  
+                                    <p> 
+                                    but I find the most satisfaction in seeing the finished product do everything
+                                    for you that it was created to do.
+                                    
+                                    </p> -->
+                                 <p>Hi! ,I  developed awesome website and Hybrid APP.I am very passionate and dedicacated towards my work.</p>
+                                 <p>It makes me very happy  if the product i makes and they are working exactly the same way.</p>
+                                 <!-- <img src="{% static 'assets/img/signature.png' %}" alt="" class="mb-30 mt-5"> -->
+                                 <div class="d-flex align-items-center">
+                                    <a href="#" class="btn-custom">
+                                    <span><i class="fas fa-phone"></i></span>
+                                    <span>Contact Me</span>
+                                    </a>
+                                    <!-- <ul class="list-inline social-links ">
+                                       <li><a href="#" class="text-dark"><i class="fab fa-facebook-f"></i></a></li>
+                                       <li><a href="#" class="text-white"><i class="fab fa-twitter"></i></a></li>
+                                       <li><a href="#" class="text-white"><i class="fab fa-instagram"></i></a></li>
+                                       <li><a href="#" class="text-white"><i class="fab fa-dribbble"></i></a></li>
+                                       <li><a href="#" class="text-white"><i class="fab fa-behance"></i></a></li>
+                                       </ul>       -->
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row ">
+                           <div class="col-md-12">
+                              <div class="section-sub-title mb-20">
+                                 <h6>I developed :</h6>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+							<div class="col-md-2"></div>
+                           <div class="col-md-4">
+                              <div class="card">
+								 <!-- <img style="width: 220px;height: 180px;" src="{% static 'images/app.jpeg' %}">
+								 -->
+								 <div class=" ">
+								 <i style="text-align: center;width: 100%; font-size: 30px;margin-top: 5px;padding: 10px;" class="fas fa-mobile-alt"></i>
+								</div>
+                                 <div class="card-body">
+                                    <h5 class="card-title" style="text-align: center;width: 100%;">Hybrid APP</h5>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-4">
+                              <div class="card">
+								 <!-- <img style="width: 220px;height: 180px;" src="{% static 'images/web.png' %}"> -->
+								<div class="">
+								 <i style="text-align: center;width: 100%; font-size: 30px;margin-top: 5px;padding: 10px;" class="fas fa-desktop"></i>
+								</div>
+                                 <div class="card-body">
+                                    <h5 class="card-title" style="text-align: center;width: 100%;">Responsive Website</h5>
+                                 </div>
+                              </div>
+                              <!-- Card -->
+						   </div>
+						   <div class="col-md-2"></div>
+                  </div>
+                  
+
+                  <!--Services-->
+                  <div class="tab-pane" id="services" role="tabpanel" aria-labelledby="services-tab">
+                     <div class="services section">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="section-title">
+                                  <h5>Skill's</h5>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row mb-20">
+                          <!-- item 1-->
+                          <div class="col-lg-6">
+                              <div class="item d-flex align-items-center item12">
+                                  <div class="circle">
+                                      <span><i style="font-size: 30px;color: orange;" class="fab fa-html5"></i> </span>
+                                  </div>
+                                  <div class="content">
+                                      <h6 class="text-dark mb-5">HTML</h6>
+                                   
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- item 2-->
+                          <div class="col-lg-6">
+                              <div class="item d-flex align-items-center item12">
+                                  <div class="circle">
+                                      <span><i style="font-size: 30px;color:red;" class="fab fa-java"></i></span>
+                                  </div>
+                                  <div class="content">
+                                      <h6  class="text-dark mb-5">JAVA</h6>
+                                      <!-- <p class="text-dark mb-0">
+                                          Lorem ipsum dolor sit amet consec tetuer adipiscing elit aenean come ligula eget .
+                                      </p> -->
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- item 3-->
+                          <div class="col-lg-6">
+                              <div class="item d-flex align-items-center item12">
+                                  <div class="circle">
+                                      <span> <i style="font-size: 30px;color:blueviolet"  class="fab fa-css3-alt"></i></span>
+                                  </div>
+                                  <div class="content">
+                                      <h6 class="text-dark mb-5">CSS</h6>
+                                      <!-- <p class="text-dark mb-0"> Lorem ipsum dolor sit amet consec tetuer adipiscing elit aenean come
+                                          ligula eget .</p> -->
+                                  </div>
+                              </div>
+                          </div>
+
+                       
+
+                          <!-- item 4-->
+                          <div class="col-lg-6">
+                              <div class="item d-flex align-items-center item12">
+                                  <div class="circle">
+                                      <span><i style="font-size: 30px;color:yellow;" class="fab fa-python"></i></span>
+                                  </div>
+                                  <div class="content">
+                                      <h6 class="text-dark mb-5">PYTHON</h6>
+                                      <!-- <p class="text-dark mb-0">Lorem ipsum dolor sit amet consec tetuer adipiscing elit aenean come
+                                          ligula eget.</p> -->
+                                  </div>
+                              </div>
+                          </div>
+
+                          <!-- item 5-->
+                          <div class="col-lg-6">
+                              <div class="item d-flex align-items-center item12">
+                                  <div class="circle">
+                                      <span><i style="font-size: 30px;color: yellowgreen" class="fab fa-js-square"></i></span>
+                                  </div>
+                                  <div class="content">
+                                      <h6 class="text-dark mb-5">JAVASCRIPT</h6>
+                                      <!-- <p class="text-dark mb-0"> Lorem ipsum dolor sit amet consec tetuer adipiscing elit aenean come
+                                          ligula eget.</p> -->
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- item 6-->
+                          <div class="col-lg-6">
+                              <div class="item d-flex align-items-center item12">
+                                  <div class="circle">
+                                      <span><i style="font-size: 30px;color:lightblue;" class="fab fa-php"></i> </span>
+                                  </div>
+                                  <div class="content">
+                                      <h6 class="text-dark mb-5">PHP</h6>
+                                      <!-- <p class="text-dark mb-0"> Lorem ipsum dolor sit amet consec tetuer adipiscing elit aenean come
+                                          ligula eget.</p> -->
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="col-lg-6">
+                           <div class="item d-flex align-items-center item12">
+                               <div class="circle">
+                                   <span> <i  style="font-size: 30px;color: violet" class="fab fa-bootstrap"></i></span>
+                               </div>
+                               <div class="content">
+                                   <h6 class="text-dark mb-5">BOOTSTRAP</h6>
+                                   <!-- <p class="text-dark mb-0"> Lorem ipsum dolor sit amet consec tetuer adipiscing elit aenean come
+                                       ligula eget.</p> -->
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-lg-6">
+                        <div class="item d-flex align-items-center item12">
+                            <div class="circle">
+                               <img style="margin-top: 15px;" src="https://img.icons8.com/material-sharp/24/000000/django.png"/>
+                            </div>
+                            <div class="content">
+                                <h6 class="text-dark mb-5">DJANGO</h6>
+                                <!-- <p class="text-dark mb-0"> Lorem ipsum dolor sit amet consec tetuer adipiscing elit aenean come
+                                    ligula eget.</p> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                     <div class="item d-flex align-items-center item12">
+                         <div class="circle">
+                             <span> <i  style="font-size: 30px;color: red;" class="fab fa-angular"></i> </span>
+                         </div>
+                         <div class="content">
+                             <h6 class="text-dark mb-5">ANGULAR</h6>
+                             <!-- <p class="text-dark mb-0"> Lorem ipsum dolor sit amet consec tetuer adipiscing elit aenean come
+                                 ligula eget.</p> -->
+                         </div>
+                     </div>
+                 </div>
+
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                  </div>
+
+                  <!--Portfolio-->
+                  <div class="tab-pane fade" id="portfolio" role="tabpanel" aria-labelledby="portfolio-tab">
+                     <div class="portfolio section">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="section-title">
+                                 <h5>My Portfolio</h5>
+                              </div>
+                           </div>
+                        </div>
+                        <!--items -->
+                        <div class="inner-items">
+                           <div class="row">
+                              <div class="col-lg-4 col-md-6">
+                                 <!--item 1 -->
+                                 <div class="item">
+                                    <div class="image">
+                                       <img src="{% static 'images/movie.png' %}" alt="">
+                                       <div class="overly">
+                                          <div class="info d-flex align-items-center">
+                                             <p  class="text-white mb-0">Movie APP</p>
+                                             <div class="details d-flex align-items-center ml-auto">
+                                                <a href="{% static 'assets/img/portfolio/1.jpg'" class="view-work">
+                                                <i class="fas fa-images"></i>
+                                                </a>
+                                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.sandeepsoft.knowyourmovie&hl=en" >
+                                                <i class="fas fa-link"></i>
+                                                </a>                                                             
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                            
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!--blog-->
+                  <!--  -->
+                  <!--contact-->
+                  <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                     <div class="contact section">
+                        <div class="row">
+                           <div class="col-md-12">
+                              <div class="section-title">
+                                 <h5> Join Me</h5>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-lg-5">
+                              <h6 class="text-dark">Get in Touch</h6>
+                              <p class="text-dark mb-20">
+                                 You're welcome to come with me .
+                                 We together will developed something creative.
+                              </p>
+                              <div class="contact-info">
+                                 <div class="item mb-20 d-flex align-items-center">
+                                    <div class="icon">
+                                       <i class="fas fa-phone base-color"></i>
+                                    </div>
+                                    <div class="details">
+                                       <p class="text-dark font-w-700 mb-0">Phone: </p>
+                                       <p class="text-dark mb-0">+91 7007788055</p>
+                                    </div>
+                                 </div>
+                                 <div class="item mb-20 d-flex align-items-center">
+                                    <div class="icon">
+                                       <i class="fas fa-envelope base-color"> </i>
+                                    </div>
+                                    <div>
+                                       <p class="text-dark font-w-700 mb-0">Email: </p>
+                                       <p class="mb-0">
+                                          <a href="mailto:kmr.sandeep1997@gmail.com" class="text-dark">kmr.sandeep1997@gmail.com</a>
+                                       </p>
+                                    </div>
+                                 </div>
+                                 <div class="item mb-20 d-flex align-items-center">
+                                    <div class="icon">
+                                       <i class="fas fa-map-marker-alt base-color"> </i>
+                                    </div>
+                                    <div>
+                                       <p class="text-dark font-w-700 mb-0">Adress: </p>
+                                       <p class="text-dark mb-0">1000 Proctor St USA.</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-7">
+                              
+                           <!-- Card -->
+                           <div class="card">
+
+                              <!-- Card image -->
+                              
+                           
+                              <!-- Card content -->
+                              <div class="card-body">
+                           
+                              <!-- Title -->
+                              <h4 class="card-title">
+                                 Interested in doing a project together?
+                              </h4>
+                              <!-- Text -->
+                              
+                              <a href="mailto:kmr.sandeep1997@gmail.com" class="btn btn-primary">Email</a>
+                           
+                              </div>
+                           
+                           </div>
+                           <!-- Card -->
+
+
+
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<!--loading -->
+<div class="loading">
+   <div class="circle"></div>
+</div>
+{% endblock %}
+{% block navscript %}
+<!-- JS Plugins  -->
+<script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'assets/js/ajax-contact.js' %}"></script>
+<script src="{%  static 'assets/js/owl.carousel.min.js' %}"></script>
+<script src="{%  static 'assets/js/main.js' %}"></script>
+<script>
+   jQuery(document).ready(function($){
+   var $timeline_block = $('.cd-timeline-block');
+   
+   //hide timeline blocks which are outside the viewport
+   $timeline_block.each(function(){
+   if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
+   $(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+   }
+   });
+   
+   //on scolling, show/animate timeline blocks when enter the viewport
+   $(window).on('scroll', function(){
+   $timeline_block.each(function(){
+   if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
+   	$(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+   }
+   });
+   });
+   });
+</script>
+{% endblock %}

@@ -1,0 +1,89 @@
+    {% extends "base.html" %}
+    {% load static %}
+    <!-- {% block style %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% endblock %} -->
+    {% block content %}
+
+    <body>
+    <div id="div1" class="sticky-top navbar-expand-lg navbar-dark primary-color " style="background-color: yellowgreen;box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);">
+        <h4 class="web_title">Beginners Python</h4>
+    </div>
+
+    <div id="slider" class="container">
+        <div class="row intro" >
+            <div class="col-md-6">
+                <h4 class="header_title">Getting Python</h4>
+                <p class="header_text">Our simple Python courses for Beginners.<br>
+                we have designed this course to clear your python concept.</p>
+                <p class="header_text">This a completely Beginners course.<br>Learn Code and Practise Example.<br>
+                Clear your Basic concept and learn to code in python</p>
+            <a href="{% url 'about' %}" target="_blank"><p style="text-align:center;"><button type="button" class="btn btn-primary">About Me</button></a></p>
+            
+            <a href="{% url 'sitemap' %}" target="_blank"><p style="text-align:center;"><button type="button" class="btn btn-primary">Sitemap</button></a></p>
+            <!-- <button type="button" class="btn btn-primary">Project</button> -->
+            </div>
+
+
+            <div class="col-md-6">
+                <img class="img_color" src="{% static 'images/image_1.png' %}"  alt="" >
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container" >
+        <div class="row description_intro">
+            {% for chapter in chapters%}
+            <div id="home_description" class="col-md-3 mobile_app " style="margin-top: 20px;">
+            <a href="{% url 'chapter_detail' chapter.slug %}">
+                <div id="home_card" class="card card-1 card_style" >
+                    <div id="home_card_body" class="card-body">
+                    <h4 id="home_card_title" class="card-title">{{chapter.chapter}}</h4>
+                    <p id="home_card_text" class="card-text" style="font-weight: 700;color: black;">
+                        {{chapter.title}}
+                    </p>
+
+                    </div>
+                </div>
+                </a>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+    <a href="#slider" id="return-to-top" title="Back to top" style="display: block;">➤</a>
+    {% endblock %}
+
+    {% block navscript %}
+    <script>
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 150 ){
+            $("#div1").css('visibility', 'visible');
+
+        }
+        else {
+        $("#div1").css('visibility', 'hidden');
+        }
+
+        });
+    </script>
+    <script>
+        // ===== Scroll to Top ====
+        $(window).scroll(function() {
+        if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+        } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+        }
+        });
+        $('#return-to-top').click(function() {      // When arrow is clicked
+        $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+        }, 500);
+        });
+    </script>
+
+
+    {% endblock %}
