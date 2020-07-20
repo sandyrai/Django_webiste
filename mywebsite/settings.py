@@ -113,16 +113,6 @@ WSGI_APPLICATION = 'mywebsite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'beginnerspython$learning1',
-        'USER': 'beginnerspython',
-        'PASSWORD' :'admin@123',
-        'HOST' : 'beginnerspython.mysql.pythonanywhere-services.com',
-        'PORT' : '3306',
-    }
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
